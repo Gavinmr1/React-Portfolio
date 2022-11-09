@@ -1,6 +1,7 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
 import { NavLink } from 'react-router-dom/dist'
+import { SocialIcon } from 'react-social-icons'
 
 export default function NavBar() {
     return (
@@ -19,15 +20,25 @@ export default function NavBar() {
                     About Me!
                 </Nav>
             </NavWrapper>
+            <SocialWrapper>
+                <SocialIcon url='http://www.github.com./Gavinmr1' target='_blank' fill='#fff' />
+                <SocialIcon url='http://www.linkedin.com/in/gavin-riggs-88b7421b5' target='_blank' fill='#fff' />
+                <SocialIcon url='http://www.facebook.com/gavin.m.riggs' target='_blank' fill='#fff' />
+            </SocialWrapper>
         </StyledNavBar>
     
     )
 }
 
-const StyledNavBar = tw.header`w-full h-full bg-green-700 p-10 flex justify-between mx-auto items-center`
-const NavWrapper = tw.div`flex items-center gap-6`
-const Nav = styled(NavLink)`
-${tw`text-white font-semibold text-lg py-2 px-4 hover:text-green-100 hover:bg-green-500 rounded-lg 
-hover:shadow-lg tracking-widest transition-all ease-in-out duration-300`}
-${({isActive}) => isActive && tw`bg-green-600`}
+const StyledNavBar = styled.header`
+${tw`absolute w-full bg-blue-900 border-b-2 border-white border-opacity-10 bg-opacity-30 backdrop-blur px-10 py-6 flex justify-between mx-auto items-center`}
 `
+const NavWrapper = tw.div`flex items-center gap-6`
+const SocialWrapper = tw.div`flex items-center gap-6`
+
+const Nav = styled(NavLink)`
+    ${tw`text-white font-semibold text-lg py-2 px-4 hover:text-green-100 hover:bg-blue-900 hover:bg-opacity-30 rounded-lg 
+    hover:shadow-lg tracking-widest transition-all ease-in-out duration-300`}
+    ${({isActive}) => isActive && tw`bg-blue-900`}
+`
+const StyledSocialIcon = tw`h-12 w-12`
