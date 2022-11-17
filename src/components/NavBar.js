@@ -31,7 +31,7 @@ export default function NavBar() {
 }
 
 const StyledNavBar = styled.header`
-${tw`absolute w-full bg-blue-900 border-b-2 border-white border-opacity-10 bg-opacity-30 backdrop-blur px-10 py-6 flex justify-between mx-auto items-center`}
+${tw`absolute w-full bg-blue-900 border-b-2 border-white border-opacity-10 bg-opacity-30 backdrop-blur-[1px] px-10 py-6 flex justify-between mx-auto items-center`}
 `
 const NavWrapper = tw.div`flex items-center gap-6`
 const SocialWrapper = tw.div`flex items-center gap-6`
